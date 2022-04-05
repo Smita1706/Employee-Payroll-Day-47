@@ -33,7 +33,7 @@
             .catch(error => { 
                 getElem.textContent = "Get Error Status : "+JSON.stringify(error)
                         });
-        const deleteElem = document.querySelector("#delete_services")
+        const deleteElem = document.querySelector("#delete_services");
         const deleteURL = "http://localhost:3000/employees/2"; 
         makePromiseCall("DELETE", deleteURL, false)
             .then (responseText => { 
