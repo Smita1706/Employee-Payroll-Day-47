@@ -21,23 +21,3 @@ let XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
         console.log(methodType+" request sent to the server");
     });
 }
-const getURL ="http://127.0.0.1:3000/employees/1"; 
-makePromiseCall("GET", getURL, true)
-      .then (responseText => { 
-          console.log("Get User Data: "+responseText)
-     })
-      .catch(error => console.log("GET Error Status: "+
-                    JSON.stringify (error)));
-const deleteURL = "http://localhost:3000/employees/4"; makePromiseCall("DELETE", deleteURL, false)
-       .then (responseText => { 
-           console.log("User Deleted: "+responseText)
-      })
-      .catch(error => console.log("DELETE Error Status: "+
-              JSON.stringify(error)));
-const postURL = "http://localhost:3000/employees";
-const emplData = {"name": "Harry","salary": "5000"}; makePromiseCall("POST", postURL, true, emplData)
-         .then (responseText => {
-           console.log("User Added: "+responseText)
-         })
-         .catch(error => console.log("POST Error Status: "+
-               JSON.stringify (error)));
