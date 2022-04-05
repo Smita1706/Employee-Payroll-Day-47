@@ -42,6 +42,19 @@
             .catch(error => {
             deleteElem.textContent = "DELETE Error Status : "+JSON.stringify(error)
             });
+          
+            const empPayrollData =
+            {
+                _name: 'Amarpa Shashanka Keerthi Kumar',
+                _gender: 'female',
+                _department: [
+                'Sales'
+                ],
+                _salary: '400000',
+                _startDate: '29 Oct 2019',
+                _note: '',
+                _profilePic: '../assets/profile-images/Ellipse -1.png'
+            };
         const postElem = document.querySelector("#post_services")
         const postURL = "http://localhost:3000/employees";
         const emplData = {"name": "Harry","salary": "5000"}; 
